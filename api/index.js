@@ -13,14 +13,15 @@ app.use(express.json());
 app.use("/api/v1", router);
 
 dbConnect();
-  
-app.listen(PORT, () => {
-  console.log("Server is running at port:", PORT);
-});
-
 app.get("/",(req,res)=>{
   res,json({
     success:true,
     message:"Server Connected Successfully"
   })
 })
+  
+app.listen(PORT, () => {
+  console.log("Server is running at port:", PORT);
+});
+
+
